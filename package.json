@@ -1,0 +1,13 @@
+{
+  "name": "fresh-mysql",
+  "version": "1.0.0",
+  "dependencies": {
+    "mysql"      : "*",
+    "event-pipe" : "*",
+    "options-stream" : "*"
+  },
+  "engines": {
+    "node": ">=4.4.0"
+  },
+  "main" : "./index.js"
+}
