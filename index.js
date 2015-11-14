@@ -32,6 +32,9 @@ Db = (function() {
   }
 
   Db.prototype.init = function(options, log) {
+    if ( void( 0 ) == options ) {
+      options = {};
+    }
     var database, dbCfg, host, password, port, showLog, user;
     this.mysql = options.mysql || require('mysql');
     host = options.host, port = options.port, user = options.user, password = options.password, database = options.database, showLog = options.showLog;

@@ -1,10 +1,15 @@
 {
   "name": "fresh-mysql",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "mysql"      : "*",
     "event-pipe" : "*",
     "options-stream" : "*"
+  },
+  "devDependencies" : {
+    "mocha" : "*",
+    "suspend" : "*",
+    "expect.js" : "*"
   },
   "engines": {
     "node": ">=4.4.0"
