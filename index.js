@@ -341,3 +341,5 @@ Db = (function() {
 })();
 
 module.exports = Db;
+// for TypeScript
+module.exports.default = module.exports;
