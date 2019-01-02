@@ -37,7 +37,9 @@ Db = (function() {
     }
     var database, dbCfg, host, password, port, showLog, user;
     this.mysql = options.mysql || require('mysql');
-    host = options.host, port = options.port, user = options.user, password = options.password, database = options.database, showLog = options.showLog;
+    showLog = options.showLog;
+    delete options.showLog;
+    // host = options.host, port = options.port, user = options.user, password = options.password, database = options.database, showLog = options.showLog;
     if (log == null) {
       log = console;
     }
@@ -50,13 +52,7 @@ Db = (function() {
     } else {
       this.log = log;
     }
-    dbCfg = {
-      host: host,
-      port: port,
-      user: user,
-      password: password,
-      database: database
-    };
+    dbCfg = options;
     dbCfg = os(dbCfg, dbOpt);
     return this._initConnectPool(dbCfg);
   };
